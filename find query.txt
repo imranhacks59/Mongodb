@@ -1,0 +1,32 @@
+*****mongodb OR Query
+db.inventory.find( { $or: [ { quantity: { $lt: 20 } }, { price: 10 } ] } )
+
+*****Mongodb and query
+db.inventory.find( { $and: [ { price: { $ne: 1.99 } }, { price: { $exists: true } } ] } )
+
+*****both or and and
+db.things.find({
+    $and: [
+        {
+            $or: [
+                {"first_name": "john"},
+                {"last_name": "john"}
+            ]
+        },
+        {
+            "Phone": "12345678"
+        }
+    ]
+})
+//AND takes an array of 2 expressions OR , phone.
+OR takes an array of 2 expressions first_name , last_name.
+
+AND
+
+OR
+
+first_name
+
+last_name
+
+Phone Number.
